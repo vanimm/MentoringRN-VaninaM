@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "213707350401",
+    "firebase_url": "https://bts-rn-mentoring-default-rtdb.firebaseio.com",
+    "project_id": "bts-rn-mentoring",
+    "storage_bucket": "bts-rn-mentoring.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213707350401:android:91ff5e28dae105e2c5c880",
+        "android_client_info": {
+          "package_name": "com.bts.mentoring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "213707350401-uub7f7t5tk0rlq8evv4cfnbqs1p8v4o8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEwbZ4etN9EFTZJOhCSgR7R3ep04AWziE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "213707350401-uub7f7t5tk0rlq8evv4cfnbqs1p8v4o8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "213707350401-1au55bj3qgdukkq0e5prasc57abs9lun.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bts.mentoring"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
