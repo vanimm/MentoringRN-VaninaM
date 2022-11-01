@@ -46,12 +46,6 @@ export default function Home() {
     );
   };
 
-  //  const loadMore = () => {
-  //   // ... aqui hacemos un fetch a un servidor u obtener los datos de la siguiente pagina
-
-  //   // los post que ya tenemos le concatenamos otra serie de post
-  //   setPosts([...posts, ...posts]);
-  // };
 
   const renderHeader = () => {
     return (

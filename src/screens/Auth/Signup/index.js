@@ -19,11 +19,10 @@ export default function Signup({navigation}) {
   };
 
   const handleSignup = () => {
-    console.warn(email, password);
     setLoading(true);
     auth()
       .createUserWithEmailAndPassword(email, password)
-      .then( (response)=>{
+      .then(response => {
         return database().ref(`/users/${response.user.uid}`).set({
           name,
           lastName,

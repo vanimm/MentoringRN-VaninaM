@@ -46,13 +46,6 @@ function DrawerNavigator() {
       <Drawer.Screen name="Profile" component={Profile} />
       <Drawer.Screen name="Settings" component={Settings} />
       <Drawer.Screen name="Support Center" component={SupportCenter} />
-      <Drawer.Screen
-        name="Logout"
-        component={() => {
-          auth().signOut();
-          return null;
-        }}
-      />
     </Drawer.Navigator>
   );
 }
