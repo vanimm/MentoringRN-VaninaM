@@ -1,5 +1,5 @@
 import {useNavigation} from '@react-navigation/native';
-import {HStack, Icon, VStack, Text, Avatar, Divider } from 'native-base';
+import {HStack, Icon, VStack, Text, Avatar, Divider} from 'native-base';
 import React, {useEffect, useState} from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -93,7 +93,7 @@ export default function Drawer() {
         <HStack>
           <Avatar size={'sm'} source={{uri: props.avatar}} mr={3} />
           <Text fontSize={16} mr={3}>{`${props.name} ${props.lastName}`}</Text>
-          
+
           <Feather
             name="message-circle"
             size={20}
@@ -113,7 +113,7 @@ export default function Drawer() {
       .ref('/users')
       .on('value', snapshot => {
         snapshot.forEach(childSnapshot => {
-          if (onLine[childSnapshot.key] && childSnapshot.key !== userId) {
+          if (online[childSnapshot.key] && childSnapshot.key !== userId) {
             setOnlineUsers(prev => [...prev, childSnapshot.val()]);
           }
         });
@@ -126,6 +126,10 @@ export default function Drawer() {
         <MenuItem name={item.name} icon={item.icon} route={item.route} />
       ))}
 
+      <Divider bg="indigo.700" thickness="2" mr="2" mt="2" />
+      {onlineUsers.map(user => (
+        <FriendItem name={user.name} lastName={user.lastName} />
+      ))}
       <TouchableOpacity onPress={logout}>
         <HStack alignItems={'center'}>
           <Icon
@@ -138,10 +142,6 @@ export default function Drawer() {
           <Text fontSize={16}>Logout</Text>
         </HStack>
       </TouchableOpacity>
-      <Divider bg="indigo.700"  thickness="2" mr="2" mt="2"/>
-      {onlineUsers.map(user => (
-        <FriendItem name={user.name} lastName={user.lastName} />
-      ))}
     </VStack>
   );
 }
